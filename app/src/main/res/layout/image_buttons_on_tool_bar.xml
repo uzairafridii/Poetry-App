@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleOfToolBar"
+        android:text="Love Poetry"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/title_margin"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/shareImageButton"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_share_black_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/title_margin"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/downloadImageButton"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_file_download_black_24dp"
+        android:layout_marginRight="@dimen/title_margin"
+        android:layout_toLeftOf="@+id/shareImageButton"
+        android:background="@null"
+        />
+
+
+</RelativeLayout>

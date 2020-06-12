@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativeLayout"
+    tools:context=".PoetryActivity">
+
+    <include layout="@layout/app_custom_bar"
+        android:id="@+id/poetryActivityToolBar"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/poetryActivityToolBar"/>
+
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:id="@+id/adsView"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-6210048859499004/1035100442"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomLayout"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nextBtn"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:background="@drawable/bg_next_and_previous_btn"
+        android:padding="10dp"
+        android:layout_margin="6dp"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/previousBtn"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:background="@drawable/bg_next_and_previous_btn"
+        android:padding="10dp"
+        android:layout_margin="6dp"
+        />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnFirstImage"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_toRightOf="@id/previousBtn"
+            android:text="1st"
+            android:textColor="@color/pink"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_next_and_previous_btn"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnLastImage"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_toLeftOf="@id/nextBtn"
+            android:text="End"
+            android:textColor="@color/pink"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_next_and_previous_btn"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
